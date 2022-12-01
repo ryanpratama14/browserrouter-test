@@ -5,17 +5,17 @@ import App from "./App";
 import Contact from "./Contact";
 import Any from "./Any";
 import reportWebVitals from "./reportWebVitals";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function Routing() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path="/" element={<App />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Any />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
